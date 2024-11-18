@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        /* Body setup: background image and page alignment */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-size: cover; /* Ensure the background image covers the full page */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Container to hold the buttons */
+        .main-container {
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Heading */
+        h1 {
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Style for buttons */
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Change button color on hover */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the 'Manage Appointment' button */
+        .manage-appointment {
+            background-color: #28a745;
+        }
+
+        .manage-appointment:hover {
+            background-color: #218838;
+        }
+
+        /* Style for the 'Upload Schedule' button */
+        .upload-schedule {
+            background-color: #ffc107;
+        }
+
+        .upload-schedule:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Welcome to the Main Page</h1>
+
+        <!-- Button for managing appointments -->
+        <button class="manage-appointment" onclick="window.location.href='thanks1.html'">Manage Appointment</button>
+        
+        <!-- Button for uploading schedule -->
+        <button class="upload-schedule" onclick="window.location.href='thanks2.html'">Upload Schedule</button>
+        
+        <!-- Buttons 3 to 8 -->
+        <button onclick="window.location.href='thanks3.html'">Button 3</button>
+        <button onclick="window.location.href='thanks4.html'">Button 4</button>
+        <button onclick="window.location.href='thanks5.html'">Button 5</button>
+        <button onclick="window.location.href='thanks6.html'">Button 6</button>
+        <button onclick="window.location.href='thanks7.html'">Button 7</button>
+        <button onclick="window.location.href='thanks8.html'">Button 8</button>
+    </div>
+
+</body>
+</html>

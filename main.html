@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patientPath</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover; /* This will make the image cover the entire page */
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Ensure body takes up the full height */
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+        }
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background: #333;
+            color: #e0e0e0;
+        }
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        .nav-button {
+            padding: 20px;
+            margin: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #6ea5e0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            width: 100px;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: background-color 0.3s ease;
+        }
+        .nav-button img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+        .comment-section {
+            padding: 10px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #e0e0e0;
+        }
+        .comment-section button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-section button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background: rgba(30, 30, 30, 0.8); /* Dark overlay to ensure icons are visible */
+            margin-top: auto; /* This makes the footer stick to the bottom */
+        }
+        .footer img {
+            margin: 0 10px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+    <div class="nav-container">
+        <a href="thankyou1.html" class="nav-button">
+            <img src="hospital.jpg" alt="Hospital">
+            Hospital
+        </a>
+        <a href="thankyou2.html" class="nav-button">
+            <img src="doctor.jpg" alt="Doctors">
+            Doctors
+        </a>
+        <a href="thankyou3.html" class="nav-button">
+            <img src="ambulance.jpg" alt="E-Ambulance">
+            E-Ambulance
+        </a>
+    </div>
+    <div class="nav-container">
+        <a href="thankyou4.html" class="nav-button">
+            <img src="opd.jpg" alt="OPD">
+            OPD's
+        </a>
+        <a href="thankyou6.html" class="nav-button">
+            <img src="pres.jpg" alt="Prescription">
+            Prescription
+        </a>
+        <a href="thankyou8.html" class="nav-button">
+            <img src="ai-generated-labs.jpg" alt="Lab reports">
+            Labs
+        </a>
+    </div>
+    <div class="comment-section">
+        <textarea rows="5" placeholder="Enter your medical issue"></textarea>
+        <button>Submit problem</button>
+    </div>
+    <div class="footer">
+        <img src="home.png" alt="Home">
+        <img src="setting.png" alt="Settings">
+        <img src="search.png" alt="Search">
+        <img src="profile.png" alt="Profile">
+    </div>
+</body>
+</html>

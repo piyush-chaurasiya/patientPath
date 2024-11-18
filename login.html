@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patientPath</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover; /* This will make the image cover the entire page */
+        }
+        .login-container {
+            text-align: center;
+            background: #6ea5e0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="text"], input[type="password"], select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            background: #333;
+            border: 1px solid #444;
+            color: #e0e0e0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .new-registration-button {
+            background-color: #28a745; /* Green background for new registration */
+        }
+        .new-registration-button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Page</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            
+            <!-- Dropdown for selecting user type (Doctor or Patient) -->
+            <select id="userType" required>
+                <option value="" disabled selected>Select User Type</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+            </select>
+
+            <button type="submit">Login</button>
+            <button type="button" class="new-registration-button" onclick="openRegistrationPage()">New Registration</button>
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the selected user type
+            const userType = document.getElementById('userType').value;
+
+            // Redirect based on user type (Doctor or Patient)
+            if (userType === 'doctor') {
+                window.location.href = 'main2.html'; // Redirect to doctor page
+            } else if (userType === 'patient') {
+                window.location.href = 'main.html'; // Redirect to patient page
+            } else {
+                alert('Please select a user type.');
+            }
+        });
+
+        // Open the registration page in a new tab
+        function openRegistrationPage() {
+            window.open('registration.html', '_blank');  // Opens registration page in a new tab
+        }
+    </script>
+</body>
+</html>

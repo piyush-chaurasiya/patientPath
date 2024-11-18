@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('back.jpg') no-repeat center center fixed;
+            background-size: cover; /* This will make the image cover the entire page */
+        }
+        .registration-container {
+            text-align: center;
+            background: #6ea5e0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="text"], input[type="password"], input[type="tel"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            background: #333;
+            border: 1px solid #444;
+            color: #e0e0e0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>New Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="hospital name" placeholder="Hospital Name" required>
+            <input type="text" id="hospital address" placeholder="Hospital Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the form data
+            const username = document.getElementById('username').value.trim();
+            const hospitalname = document.getElementById('hospital name').value.trim();
+            const hospital_address = document.getElementById('hospital address').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirm_password = document.getElementById('confirm_password').value.trim();
+
+            // Check if the password and confirm password match
+            if (password !== confirm_password) {
+                alert("Passwords do not match! Please check your entries.");
+                return; // Stop form submission if passwords do not match
+            }
+            
+            // If passwords match, proceed with registration
+            alert("Registration Successful!");
+
+            // Open the login2 page in a new tab
+            window.open('login.html', '_blank'); // Opens login2.html in a new tab
+
+            // Redirect to the login page (same as above but for the current tab)
+            window.location.href = 'login.html'; // Redirects to the login2.html page in the current tab
+        });
+    </script>
+</body>
+</html>
+
+
+
+
